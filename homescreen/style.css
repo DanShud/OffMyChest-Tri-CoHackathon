@@ -1,0 +1,46 @@
+/* <!DOCTYPE html>
+  <html>
+    <title>Waiting Room</title>
+      <h1>Please wait! You are in the waiting room.</h1>
+  <html>
+*/
+
+/* <!DOCTYPE html>
+<html>
+<body> 
+    <head>
+    <title>Off My Chest</titel>
+  </head>
+  <body>
+    <h1>I Need Help</h1> <!-- button -->
+    <h1>New</h1> <!-- button -->
+*/
+
+title {
+  text-align: center;
+  color:000000;
+  family-font: 'Sans-serif', Verdana;
+}
+h1 {
+  color:#3a88fe;
+}
+
+/* Style the button */
+.button {
+   border-radius: 10px;
+   background-color: #00a3d7;
+   /*border-style: dotted;
+   border: #675AF5; */
+   padding: 14px 40px; /* size of button */
+   text-align: center; /* alignment of words */
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+}
+
+.button:hover {
+   background-color: #004d65;
+   color: white;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+home.css (nav bar)
