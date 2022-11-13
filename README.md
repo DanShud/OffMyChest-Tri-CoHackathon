@@ -25,9 +25,7 @@ We lacked experience in JavaScript, HTML, and CSS, and it was difficult to align
 What we are proud about: 
 We created an actual working chat with a decent layout without having any experience with JavaScript and servers. 
 
-What are the following steps:
-Adding report and verification functions
-Creating a mobile alternative for the website
+What are the following steps: Adding report and verification functions -> Creating a mobile alternative for the website
 
 
 Please see the presentation for the project following the link: https://docs.google.com/presentation/d/1owqfhqyZlyLivIbjOLX3-IlCG_2ibP0t/edit#slide=id.g183ae13985a_0_348
