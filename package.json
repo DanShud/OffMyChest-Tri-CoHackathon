@@ -1,14 +1,21 @@
 {
-  "name": "offmychest",
+  "name": "chat-room",
   "version": "1.0.0",
-  "description": "Every new repl comes with a `.replit` and a `replit.nix` file that let you configure your repl to do just about anything in any language!",
-  "main": "script.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "devstart": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
     "socket.io": "^4.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
