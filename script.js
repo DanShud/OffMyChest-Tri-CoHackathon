@@ -1,34 +1,48 @@
-haconst socket = io('http://localhost:3000')
-const messageContainer = document.getElementById('message-container')
-const messageForm = document.getElementById('send-container')
-const messageInput = document.getElementById('message-input')
+const chatForm =  document.getElementById("chat-box")
 
-const name = prompt('What is your name?')
-appendMessage('You joined')
-socket.emit('new-user', name)
+const chatMessages = document.querySelector('.chatbox')
 
-socket.on('chat-message', data => {
-  appendMessage(`${data.name}: ${data.message}`)
-})
+const {username,room} = Qs.parse(location.search, {ignoreQueryPrefix: true});
 
-socket.on('user-connected', name => {
-  appendMessage(`${name} connected`)
-})
+const socket = io();
 
-socket.on('user-disconnected', name => {
-  appendMessage(`${name} disconnected`)
-})
+console.log(username)
 
-messageForm.addEventListener('submit', e => {
-  e.preventDefault()
-  const message = messageInput.value
-  appendMessage(`You: ${message}`)
-  socket.emit('send-chat-message', message)
-  messageInput.value = ''
-})
+//sends join room to the server, with a payload cointaing username room
+socket.emit('join room', {username, room})
 
-function appendMessage(message) {
-  const messageElement = document.createElement('div')
-  messageElement.innerText = message
-  messageContainer.append(messageElement)
+//when client recieves a message from the server
+socket.on('message', message => {
+    console.log(message);
+    outputMessage(message);
+    //auto scroll when a message is sent
+    chatMessages.scrollTo(chatMessages.scrollHeight)
+});
+
+//message is sent
+ chatForm.addEventListener('submit', e =>{
+    e.preventDefault();
+
+    const msg = e.target.elements.msg.value;
+    const user = username 
+       // sending message to server
+    socket.emit('chatMessage',{msg, user});
+    e.target.elements.msg.value = ''; //sets text in textField to nothing
+    
+    
+ });
+
+
+//  output messasge to chat box in html 
+function outputMessage(message){
+    const div = document.createElement('div');
+    div.classList.add('message');
+    div.innerHTML = `<div class="msg-row">
+    <div class="msg-text">
+        <h2>${message.user}</h2>
+        <p>${message.text}</p>
+    </div>
+</div>`
+    document.querySelector('.col-1').appendChild(div);
 }
+
