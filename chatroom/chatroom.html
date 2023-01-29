@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <meta charset="UTF-8">
-        <title>Chatroom</title>
-    </head>
+<head>
+    <meta charset="UTF-8", name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href= "chatroom.css">
+</head>
     <body>
-        <h1>Welcome to the chatroom!</h1>
-      
-        <div id="message-contianer"></div>
-            <form id="send-container">
-                <input type="text" id="message-input">
-                <button type="submit" id="send-button">send</button>
-            </form>
-    </body>
+        <div class="container">
+            <div class="chatbox">
+                <div class="col-1">
+                    
+                </div>
 
-
-
-  <!-- must code to *show* user input -->
+                <div class="col-1-5">
+                <form id="chat-box">
+                    <input id="msg" type="text" placeholder="Type your messages here..."/>
+                    </form>
+                    </div>     
+                </div>
+            <div class="col-2"></div>
+            
+        </div>
+</body>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js" 
+integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- this is importing a queryString parser so we can read the username and room# easily --> 
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>      
 </html>

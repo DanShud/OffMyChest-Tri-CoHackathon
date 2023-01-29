@@ -1,9 +1,9 @@
-What is “Off My Chest”?
-“Off My Chest” is a project prepared for Tri-Co Hackathon at Haverford college. 
+What is “Off Your Chest”?
+“Off Your Chest” is a project prepared for Tri-Co Hackathon at Haverford college. 
 This project's inspiration was the increasing number of people struggling with mental health who can’t access any help or are afraid of doing it. 
 
 What does it do?
-“Off My Chest” is an anonymous mental health crisis live chat where people are paired with a help provider.
+“Off Your Chest” is an anonymous mental health crisis live chat where people are paired with a help provider.
 
 How we built it? 
 We divided the project into several parts:
